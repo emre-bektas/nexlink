@@ -8,8 +8,8 @@ import {Sidebar} from "@/components/static/sidebar";
 const inter = Inter({subsets: ["latin"]});
 
 export const metadata: Metadata = {
-    title: "bek.api API Template",
-    description: "API reference template",
+    title: "NexLink API Template",
+    description: "NexLink API reference template",
 };
 
 export default function RootLayout({

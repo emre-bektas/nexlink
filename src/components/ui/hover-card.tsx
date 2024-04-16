@@ -1,5 +1,5 @@
 "use client";
-import {ReactNode, useRef, useState} from "react";
+import React, {useRef, useState} from "react";
 import {Card, CardBody} from "@nextui-org/card";
 import classNames from "classnames";
 import {cn} from "@/utils/cn";
@@ -9,7 +9,13 @@ interface MousePosition {
     y: number;
 }
 
-const SvgCard = ({cn}:any) => (
+interface Props {
+    title: string;
+    description?: string;
+    Icon: React.ComponentType<any>
+}
+
+const SvgCard = ({cn}: any) => (
     <svg aria-hidden="true"
          className={classNames("absolute inset-x-0 inset-y-[-30%] h-[160%] w-full skew-y-[-18deg]", cn)}>
         <defs>
@@ -26,7 +32,7 @@ const SvgCard = ({cn}:any) => (
     </svg>
 )
 
-export default function HoverCard({children}: { children: ReactNode }) {
+const HoverCard: React.FC<Props> = ({title, description, Icon}) => {
 
     const divRef = useRef<HTMLDivElement>(null);
 
@@ -51,11 +57,11 @@ export default function HoverCard({children}: { children: ReactNode }) {
         <Card
             ref={divRef}
             onMouseMove={handleMouseMove}
-            className="group relative flex ">
+            className="group relative flex not-prose">
             <div className="pointer-events-none">
                 <div
                     className="absolute inset-0  z-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] ">
-                    <SvgCard cn={cn("fill-black/[0.02] stroke-black/5 dark:fill-white/[0.02] dark:stroke-white/5")} />
+                    <SvgCard cn={cn("fill-black/[0.02] stroke-black/5 dark:fill-white/[0.02] dark:stroke-white/5")}/>
                 </div>
                 <div
                     className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#D7EDEA] to-[#F4FBDF] opacity-0 transition duration-300 group-hover:opacity-100 dark:from-[#202D2E] dark:to-[#303428]"
@@ -67,30 +73,34 @@ export default function HoverCard({children}: { children: ReactNode }) {
                     style={{
                         maskImage: `radial-gradient(180px at ${mousePosition.x + 'px'}  ${mousePosition.y + 'px'}, white, transparent)`
                     }}>
-                    <SvgCard cn={cn("fill-black/50 stroke-black/70 dark:fill-white/5 dark:stroke-white/10")} />
+                    <SvgCard cn={cn("fill-black/50 stroke-black/70 dark:fill-white/5 dark:stroke-white/10")}/>
                 </div>
             </div>
             <CardBody>
-                <div className="relative rounded-2xl px-4 pb-4 pt-16">
-                    <div
-                        className="flex h-7 w-7 items-center justify-center rounded-full bg-zinc-900/5 ring-1 ring-zinc-900/25 backdrop-blur-[2px] transition duration-300 group-hover:bg-white/50 group-hover:ring-zinc-900/25 dark:bg-white/7.5 dark:ring-white/15 dark:group-hover:bg-emerald-300/10 dark:group-hover:ring-emerald-400">
-                        <svg viewBox="0 0 20 20" aria-hidden="true"
-                             className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-emerald-300/10 dark:group-hover:stroke-emerald-400">
-                            <path strokeLinecap="round" strokeLinejoin="round"
-                                  d="M10 16.5c4.142 0 7.5-3.134 7.5-7s-3.358-7-7.5-7c-4.142 0-7.5 3.134-7.5 7 0 1.941.846 3.698 2.214 4.966L3.5 17.5c2.231 0 3.633-.553 4.513-1.248A8.014 8.014 0 0 0 10 16.5Z"></path>
-                            <path fill="none" strokeLinecap="round" strokeLinejoin="round"
-                                  d="M7.5 8.5h5M8.5 11.5h3"></path>
-                        </svg>
-                    </div>
+                <div className="relative rounded-2xl px-4 py-6">
+                    {
+                        Icon && (
+                            <div
+                                className="flex h-7 w-7 items-center justify-center rounded-full bg-zinc-900/5 ring-1 ring-zinc-900/25 backdrop-blur-[2px] transition duration-300 group-hover:bg-white/50 group-hover:ring-zinc-900/25 dark:bg-white/7.5 dark:ring-white/15 dark:group-hover:bg-emerald-300/10 dark:group-hover:ring-emerald-400">
+                                <Icon className={"w-4"}/>
+                            </div>
+                        )
+                    }
                     <h3 className="mt-4 text-sm font-semibold leading-7 text-zinc-900 dark:text-white"><a
-                        href="/conversations"><span className="absolute inset-0 rounded-2xl"></span>Conversations</a>
-                    </h3><p
-                    className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Learn about the conversation model and how
-                    to
-                    create, retrieve, update, delete, and list conversations.</p>
+                        href="/conversations">
+                        <span className="absolute inset-0 rounded-2xl"></span>{title}</a>
+                    </h3>
+                    {
+                        description && (
+                            <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{description}</p>
+                        )
+                    }
+
                 </div>
             </CardBody>
         </Card>
 
     )
 }
+
+export default HoverCard;

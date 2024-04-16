@@ -1,17 +1,27 @@
 "use client";
-import {Avatar, Navbar, NavbarBrand, NavbarContent} from "@nextui-org/react";
+import {Avatar, Navbar, NavbarBrand, NavbarContent, Switch} from "@nextui-org/react";
 import {Input} from "@nextui-org/input";
-import {Search} from "lucide-react";
+import {MoonIcon, Search, SunMediumIcon} from "lucide-react";
 import {useTheme} from "next-themes";
+import {useEffect, useState} from "react";
 
 export const Header = () => {
 
-    const { theme, setTheme } = useTheme();
+    const {theme, setTheme} = useTheme();
+
+    const [isSelected, setIsSelected] = useState(false)
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
 
     return (
-        <Navbar  classNames={{
-            wrapper : "px-4 sm:px-6 md:px-8 max-w-8xl"
-        }} isBordered>
+        <Navbar classNames={{
+            base: "bg-transparent ",
+            wrapper: "px-4 sm:px-6 md:px-8 max-w-8xl"
+        }}>
             <NavbarContent justify="start">
                 <NavbarBrand className="mr-4 gap-3">
                     <p className="font-bold text-inherit">NexLink API Creations</p>
@@ -40,8 +50,34 @@ export const Header = () => {
                     size="sm"
                     src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
                 />
-                <button onClick={() => setTheme('light')}>Light Mode</button>
-                <button onClick={() => setTheme('dark')}>Dark Mode</button>
+                <div className={"w-14 flex-shrink-0"}>
+                    {
+                        mounted && (
+                            <Switch
+                                color="secondary"
+                                classNames={{
+                                    thumbIcon: "w-4 h-4",
+                                }}
+                                defaultSelected={theme === "dark"}
+                                onValueChange={(val) => {
+                                    if (val) {
+                                        setTheme("dark");
+                                    } else {
+                                        setTheme("light");
+                                    }
+                                }}
+                                thumbIcon={({isSelected, className}) =>
+                                    isSelected ? (
+                                        <SunMediumIcon className={className}/>
+                                    ) : (
+                                        <MoonIcon className={className}/>
+                                    )
+                                }
+                            />
+
+                        )
+                    }
+                </div>
             </NavbarContent>
         </Navbar>
     )

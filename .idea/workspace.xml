@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9501868-a984-45c4-b6f8-109219ccb002" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/ui/article-header/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/data.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/static/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/static/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/anchor-title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/anchor-title/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/hover-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/hover-card.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +35,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -63,6 +70,8 @@
       <recent name="$PROJECT_DIR$/src/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/ui/anchor-title" />
+      <recent name="$PROJECT_DIR$/src/components/ui/index" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
@@ -84,11 +93,22 @@
       <workItem from="1713108485072" duration="113000" />
       <workItem from="1713108624244" duration="619000" />
       <workItem from="1713109320886" duration="1124000" />
-      <workItem from="1713110459377" duration="26614000" />
+      <workItem from="1713110459377" duration="32502000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

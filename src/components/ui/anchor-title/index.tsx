@@ -1,6 +1,6 @@
 import {Link2} from "lucide-react";
 
-export default function AnchorTitle({children, id}: { children: React.ReactNode, id?: string }) {
+export default function Index({children, id}: { children: React.ReactNode, id?: string }) {
 
 
     if (!id){

@@ -1,32 +1,30 @@
 "use client";
 import ProseComponent from "@/components/ui/prose";
 import {Button} from "@nextui-org/react";
-import {ArrowRight} from "lucide-react";
+import {ArrowRight, BookOpenText, HeartHandshake, MessageCircleQuestion} from "lucide-react";
 import AnchorTitle from "@/components/ui/anchor-title";
 import HoverCard from "@/components/ui/hover-card";
+import ArticleHeader from "@/components/ui/article-header";
+import {featuresText} from "@/utils/data";
+import Link from "next/link";
 
 export default function Home() {
+
+
+
+
     return (
         <main className="flex-auto">
-            <article className="flex h-full flex-col pb-10 pt-16">
-                <header className="relative mb-4">
-                    <div className="mt-0.5 space-y-2.5">
-                        <div
-                            className="h-5 text-primary dark:text-primary-light text-sm font-semibold">
-                            Giriş
-                        </div>
-                        <div className="flex items-center">
-                            <h1
-                                className="inline-block text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight dark:text-gray-200">Create
-                                a new link</h1>
-                        </div>
-                    </div>
-                </header>
+            <article className="flex h-full flex-col py-10">
+
+                <ArticleHeader title={"👋 Hoş Geldiniz!"} subtitle={"Giriş"}/>
 
                 <ProseComponent>
-                    <p className="lead">Use the Protocol API to access contacts, conversations, group messages, and more
-                        and seamlessly integrate your product into the workflows of dozens of devoted Protocol
-                        users.</p>
+                    <p className="lead">
+                        NexLink, web sayfalarından hiperlinkleri çıkarmak ve bu linklerin meta verilerini analiz etmek
+                        için güçlü bir araçtır. Geliştiricilere ve içerik üreticilerine, web sayfalarındaki link
+                        yapılarını anlamaları ve optimizasyonlarını yapmaları için detaylı veriler sunar.
+                    </p>
 
                     <div className="not-prose mb-16 mt-6 flex gap-3">
                         <Button size={"sm"} color={"secondary"} radius={"full"}
@@ -42,69 +40,55 @@ export default function Home() {
                             {"SDK'ları keşfedin"}
                         </Button>
                     </div>
+
+
                     <div className="my-16 xl:max-w-none">
-                        <AnchorTitle id={"emre"}>Guides</AnchorTitle>
+                        <AnchorTitle id={"emre"}>Özellikler</AnchorTitle>
+
                         <div
-                            className="not-prose mt-4 grid grid-cols-1 gap-8 border-t border-zinc-900/5 pt-10 sm:grid-cols-2 xl:grid-cols-2 dark:border-white/5">
-                            <div><h3 className="text-sm font-semibold text-zinc-900 dark:text-white">Authentication</h3>
-                                <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Learn how to authenticate
-                                    your API requests.</p>
-                                <p className="mt-4"><a
-                                    className="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition text-emerald-500 hover:text-emerald-600 dark:text-emerald-400 dark:hover:text-emerald-500"
-                                    href="/authentication">Read more
-                                    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"
-                                         className="mt-0.5 h-5 w-5 relative top-px -mr-1">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                              d="m11.5 6.5 3 3.5m0 0-3 3.5m3-3.5h-9"></path>
-                                    </svg>
-                                </a></p>
-                            </div>
-                            <div><h3 className="text-sm font-semibold text-zinc-900 dark:text-white">Pagination</h3><p
-                                className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Understand how to work with
-                                paginated responses.</p>
-                                <p className="mt-4"><a
-                                    className="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition text-emerald-500 hover:text-emerald-600 dark:text-emerald-400 dark:hover:text-emerald-500"
-                                    href="/pagination">Read more
-                                    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"
-                                         className="mt-0.5 h-5 w-5 relative top-px -mr-1">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                              d="m11.5 6.5 3 3.5m0 0-3 3.5m3-3.5h-9"></path>
-                                    </svg>
-                                </a></p>
-                            </div>
-                            <div><h3 className="text-sm font-semibold text-zinc-900 dark:text-white">Errors</h3><p
-                                className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Read about the different types
-                                of errors returned by the API.</p>
-                                <p className="mt-4"><a
-                                    className="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition text-emerald-500 hover:text-emerald-600 dark:text-emerald-400 dark:hover:text-emerald-500"
-                                    href="/errors">Read more
-                                    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"
-                                         className="mt-0.5 h-5 w-5 relative top-px -mr-1">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                              d="m11.5 6.5 3 3.5m0 0-3 3.5m3-3.5h-9"></path>
-                                    </svg>
-                                </a></p>
-                            </div>
-                            <div><h3 className="text-sm font-semibold text-zinc-900 dark:text-white">Webhooks</h3><p
-                                className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Learn how to programmatically
-                                configure webhooks for your app.</p>
-                                <p className="mt-4"><a
-                                    className="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition text-emerald-500 hover:text-emerald-600 dark:text-emerald-400 dark:hover:text-emerald-500"
-                                    href="/webhooks">Read more
-                                    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"
-                                         className="mt-0.5 h-5 w-5 relative top-px -mr-1">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                              d="m11.5 6.5 3 3.5m0 0-3 3.5m3-3.5h-9"></path>
-                                    </svg>
-                                </a></p>
-                            </div>
+                            className="not-prose mt-4 grid grid-cols-1 gap-8 border-t border-zinc-900/5 pt-10 sm:grid-cols-2 xl:grid-cols-3 dark:border-white/5">
+                            {
+                                featuresText.map((item, i) => (
+                                    <div key={i}>
+                                        <h3 className="text-sm font-semibold text-zinc-900 dark:text-white">{item.title}</h3>
+                                        <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{item.description}</p>
+                                        <div className="mt-4">
+                                            <Button variant={"flat"}
+                                                    size={"sm"}
+                                                    as={Link}
+                                                    href={item.href}
+                                                    radius={"full"}
+                                                    endContent={<ArrowRight className={"w-4"}/>}
+                                                    color={"secondary"}>Daha fazla bilgi edinin.</Button>
+                                        </div>
+                                    </div>
+                                ))
+                            }
+
                         </div>
                     </div>
-                    <div className={"grid grid-cols-1 md:grid-cols-2 gap-5 w-full"}>
-                        <HoverCard>Emre</HoverCard>
-                        <HoverCard>Emre</HoverCard>
-                        <HoverCard>Emre</HoverCard>
-                        <HoverCard>Emre</HoverCard>
+                    <AnchorTitle id={"resources"}>Kaynaklar</AnchorTitle>
+
+                    <div className={"grid grid-cols-1 md:grid-cols-2 gap-5 w-full border-t border-zinc-900/5 pt-10 dark:border-white/5"}>
+
+                        <HoverCard
+                            title={"Dökümantasyon"}
+                            description={"Detaylı API dökümantasyonuna buradan ulaşabilirsiniz."}
+                            Icon={BookOpenText}
+
+                        />
+                        <HoverCard
+                            title={"SSS"}
+                            description={"Sıkça sorulan sorular sayfamızı ziyaret edin."}
+                            Icon={MessageCircleQuestion}
+
+                        />
+                        <HoverCard
+                            title={"Destek"}
+                            description={"Destek ekibimizle iletişime geçmek için burayı tıklayın."}
+                            Icon={HeartHandshake}
+
+                        />
                     </div>
                 </ProseComponent>
             </article>
