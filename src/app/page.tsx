@@ -7,11 +7,9 @@ import HoverCard from "@/components/ui/hover-card";
 import ArticleHeader from "@/components/ui/article-header";
 import {featuresText} from "@/utils/data";
 import Link from "next/link";
+import CodeTabs from "@/components/ui/code-tabs";
 
-export default function Home() {
-
-
-
+export default function page() {
 
     return (
         <main className="flex-auto">
@@ -29,24 +27,37 @@ export default function Home() {
                     <div className="not-prose mb-16 mt-6 flex gap-3">
                         <Button size={"sm"} color={"secondary"} radius={"full"}
                                 variant={"flat"}
+                                as={Link}
+                                href={"/rate-limits"}
                                 className={"font-medium"}
                                 endContent={<ArrowRight className={"w-4"}/>}>
-                            Hızlı Başlangıç
+                            Oran Sınırları
                         </Button>
                         <Button size={"sm"} radius={"full"}
+                                as={Link}
+                                href={"/errors"}
                                 variant={"flat"}
                                 className={"font-medium"}
                         >
-                            {"SDK'ları keşfedin"}
+                            {"Hatalar"}
                         </Button>
                     </div>
-
+                    <CodeTabs
+                        tabs={[
+                            {
+                                key: "base-url",
+                                title: "Temel URL",
+                                language: "http",
+                                content: "https://localhost:3000/api/"
+                            },
+                        ]}
+                    />
 
                     <div className="my-16 xl:max-w-none">
-                        <AnchorTitle id={"emre"}>Özellikler</AnchorTitle>
+                        <AnchorTitle id={"features"}>Özellikler</AnchorTitle>
 
                         <div
-                            className="not-prose mt-4 grid grid-cols-1 gap-8 border-t border-zinc-900/5 pt-10 sm:grid-cols-2 xl:grid-cols-3 dark:border-white/5">
+                            className="not-prose mt-4 grid grid-cols-1 gap-8  sm:grid-cols-2 xl:grid-cols-3">
                             {
                                 featuresText.map((item, i) => (
                                     <div key={i}>
@@ -69,7 +80,7 @@ export default function Home() {
                     </div>
                     <AnchorTitle id={"resources"}>Kaynaklar</AnchorTitle>
 
-                    <div className={"grid grid-cols-1 md:grid-cols-2 gap-5 w-full border-t border-zinc-900/5 pt-10 dark:border-white/5"}>
+                    <div className={"grid grid-cols-1 md:grid-cols-2 gap-5"}>
 
                         <HoverCard
                             title={"Dökümantasyon"}

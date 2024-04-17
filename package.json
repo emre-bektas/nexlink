@@ -9,7 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@nextui-org/react": "^2.2.10",
+    "@nextui-org/react": "^2.3.1",
+    "@types/react-syntax-highlighter": "^15.5.11",
     "classnames": "^2.5.1",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.28",
@@ -19,7 +20,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-syntax-highlighter": "^15.5.0",
-    "tailwind-merge": "^2.2.2"
+    "tailwind-merge": "^2.2.2",
+    "usehooks-ts": "^3.1.0"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.12",

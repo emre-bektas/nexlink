@@ -29,8 +29,9 @@ export const Sidebar = () => {
 
                 },
                 {
-                    title: "Hızlı Başlangıç",
-                    href: "/",
+                    title: "Oran Sınırları",
+                    href: "/rate-limits",
+                    active : pathname.startsWith("/rate-limits"),
                 },
                 {
                     title: "Hatalar",

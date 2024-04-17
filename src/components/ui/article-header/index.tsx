@@ -7,7 +7,7 @@ const ArticleHeader = ({ title, subtitle }: Props) => (
     <header className="relative mb-4">
         <div className="mt-0.5 space-y-2.5">
             <div
-                className="h-5 text-primary dark:text-primary-light text-sm font-semibold">
+                className="h-5 text-secondary text-sm font-semibold">
                 {subtitle}
             </div>
             <div className="flex items-center">

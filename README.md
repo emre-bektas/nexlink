@@ -12,6 +12,7 @@ Bu şık ve kullanışlı API dokümantasyon şablonumuzla bilgi aktarımını h
 - [TypeScript](https://www.typescriptlang.org/) – language
 - [Tailwind](https://tailwindcss.com/) – CSS
 - [NextUI](https://nextui.org/) – UI library
+- [Lucide](https://lucide.dev/) – icons
 
 
 

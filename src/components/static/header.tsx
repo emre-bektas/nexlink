@@ -4,12 +4,12 @@ import {Input} from "@nextui-org/input";
 import {MoonIcon, Search, SunMediumIcon} from "lucide-react";
 import {useTheme} from "next-themes";
 import {useEffect, useState} from "react";
+import {Kbd} from "@nextui-org/kbd";
 
 export const Header = () => {
 
-    const {theme, setTheme} = useTheme();
+    const {setTheme, resolvedTheme} = useTheme();
 
-    const [isSelected, setIsSelected] = useState(false)
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
@@ -31,12 +31,13 @@ export const Header = () => {
             <NavbarContent as="div" className="items-center" justify="end">
                 <Input
                     classNames={{
-                        base: "max-w-full h-10",
+                        base: "max-w-sm h-10",
                         mainWrapper: "h-full",
                         input: "text-small",
                         inputWrapper: "h-full font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20",
                     }}
-                    placeholder="Type to search..."
+                    endContent={<Kbd keys={["command"]}>K</Kbd>}
+                    placeholder="Hızlı Arama..."
                     size="sm"
                     startContent={<Search size={18}/>}
                     type="search"
@@ -53,27 +54,29 @@ export const Header = () => {
                 <div className={"w-14 flex-shrink-0"}>
                     {
                         mounted && (
-                            <Switch
-                                color="secondary"
-                                classNames={{
-                                    thumbIcon: "w-4 h-4",
-                                }}
-                                defaultSelected={theme === "dark"}
-                                onValueChange={(val) => {
-                                    if (val) {
-                                        setTheme("dark");
-                                    } else {
-                                        setTheme("light");
+                            <>
+                                <Switch
+                                    color="secondary"
+                                    classNames={{
+                                        thumbIcon: "w-4 h-4",
+                                    }}
+                                    defaultSelected={resolvedTheme == "dark"}
+                                    onValueChange={(val) => {
+                                        if (val) {
+                                            setTheme("dark");
+                                        } else {
+                                            setTheme("light");
+                                        }
+                                    }}
+                                    thumbIcon={({isSelected, className}) =>
+                                        isSelected ? (
+                                            <SunMediumIcon className={className}/>
+                                        ) : (
+                                            <MoonIcon className={className}/>
+                                        )
                                     }
-                                }}
-                                thumbIcon={({isSelected, className}) =>
-                                    isSelected ? (
-                                        <SunMediumIcon className={className}/>
-                                    ) : (
-                                        <MoonIcon className={className}/>
-                                    )
-                                }
-                            />
+                                />
+                            </>
 
                         )
                     }
