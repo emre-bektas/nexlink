@@ -33,7 +33,7 @@ export const HeaderDoc = () => {
             <NavbarContent className="items-center w-full" justify={"end"}>
                 <Input
                     classNames={{
-                        base: "max-w-sm h-10",
+                        base: "max-w-sm h-10 hidden",
                         mainWrapper: "h-full",
                         input: "text-small",
                         inputWrapper: "h-full font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20",

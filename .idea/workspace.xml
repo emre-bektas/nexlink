@@ -5,36 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9501868-a984-45c4-b6f8-109219ccb002" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/(home)/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/docs/component/button/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/docs/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/docs/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/static/header/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/browser-design/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/sidebar/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/button/button-docs.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/button/button.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/css/prefix/button.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/static/sidebar.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/ui/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/css/root.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bun.lockb" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lockb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/next.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/errors/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/errors/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/rate-limits/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/rate-limits/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/static/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/static/docs/header/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/static/sidebar/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/code-tabs/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/code-tabs/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/hover-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/hover-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ui/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/ui/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/errors/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/errors/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/rate-limits/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/rate-limits/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/docs/component/button/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/docs/component/button/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/docs/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/docs/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/docs/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/docs/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/static/docs/header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/static/docs/header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/sidebar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/sidebar/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/data.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/button/button-docs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/button/button-docs.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/button/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/button/button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/css/prefix/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/main-svg/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/static/sidebar.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/static/sidebar.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +38,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="Less File" />
+        <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -72,12 +68,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "jsx.switch.disabled": "true",
-    "last_opened_file_path": "/Users/emrebektas/Desktop/Uygulamalar/api-template/src/app",
+    "last_opened_file_path": "/Users/emrebektas/Desktop/Uygulamalar/api-template/src/app/docs/component",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -90,11 +88,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/docs/component" />
+      <recent name="$PROJECT_DIR$/src/ui/css" />
       <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/src/components/static/docs" />
       <recent name="$PROJECT_DIR$/src/app/docs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/ui/css" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/app/(home)" />
       <recent name="$PROJECT_DIR$/src/components/ui/anchor-title" />
@@ -121,7 +122,10 @@
       <workItem from="1713109320886" duration="1124000" />
       <workItem from="1713110459377" duration="40298000" />
       <workItem from="1713308692534" duration="20540000" />
-      <workItem from="1713389671968" duration="10014000" />
+      <workItem from="1713389671968" duration="10062000" />
+      <workItem from="1713399838257" duration="13000" />
+      <workItem from="1713399957340" duration="1332000" />
+      <workItem from="1713401298171" duration="8649000" />
     </task>
     <servers />
   </component>

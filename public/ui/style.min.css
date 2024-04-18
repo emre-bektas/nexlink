@@ -1,1 +1,434 @@
-.btn_{padding-left:.75rem;padding-right:.75rem}
+:root,.light,[data-theme="light"]{
+  color-scheme: light;
+  --nexlink-background: 0 0% 100%;
+  --nexlink-foreground-50: 0 0% 98.04%;
+  --nexlink-foreground-100: 240 4.76% 95.88%;
+  --nexlink-foreground-200: 240 5.88% 90%;
+  --nexlink-foreground-300: 240 4.88% 83.92%;
+  --nexlink-foreground-400: 240 5.03% 64.9%;
+  --nexlink-foreground-500: 240 3.83% 46.08%;
+  --nexlink-foreground-600: 240 5.2% 33.92%;
+  --nexlink-foreground-700: 240 5.26% 26.08%;
+  --nexlink-foreground-800: 240 3.7% 15.88%;
+  --nexlink-foreground-900: 240 5.88% 10%;
+  --nexlink-foreground: 201.81999999999994 24.44% 8.82%;
+  --nexlink-divider: 0 0% 6.67%;
+  --nexlink-divider-opacity: 0.15;
+  --nexlink-focus: 212.01999999999998 100% 46.67%;
+  --nexlink-overlay: 0 0% 0%;
+  --nexlink-content1: 0 0% 100%;
+  --nexlink-content1-foreground: 201.81999999999994 24.44% 8.82%;
+  --nexlink-content2: 240 4.76% 95.88%;
+  --nexlink-content2-foreground: 240 3.7% 15.88%;
+  --nexlink-content3: 240 5.88% 90%;
+  --nexlink-content3-foreground: 240 5.26% 26.08%;
+  --nexlink-content4: 240 4.88% 83.92%;
+  --nexlink-content4-foreground: 240 5.2% 33.92%;
+  --nexlink-default-50: 0 0% 98.04%;
+  --nexlink-default-100: 240 4.76% 95.88%;
+  --nexlink-default-200: 240 5.88% 90%;
+  --nexlink-default-300: 240 4.88% 83.92%;
+  --nexlink-default-400: 240 5.03% 64.9%;
+  --nexlink-default-500: 240 3.83% 46.08%;
+  --nexlink-default-600: 240 5.2% 33.92%;
+  --nexlink-default-700: 240 5.26% 26.08%;
+  --nexlink-default-800: 240 3.7% 15.88%;
+  --nexlink-default-900: 240 5.88% 10%;
+  --nexlink-default-foreground: 0 0% 0%;
+  --nexlink-default: 240 4.88% 83.92%;
+  --nexlink-primary-50: 212.5 92.31% 94.9%;
+  --nexlink-primary-100: 211.84000000000003 92.45% 89.61%;
+  --nexlink-primary-200: 211.84000000000003 92.45% 79.22%;
+  --nexlink-primary-300: 212.24 92.45% 68.82%;
+  --nexlink-primary-400: 212.14 92.45% 58.43%;
+  --nexlink-primary-500: 212.01999999999998 100% 46.67%;
+  --nexlink-primary-600: 212.14 100% 38.43%;
+  --nexlink-primary-700: 212.24 100% 28.82%;
+  --nexlink-primary-800: 211.84000000000003 100% 19.22%;
+  --nexlink-primary-900: 211.84000000000003 100% 9.61%;
+  --nexlink-primary-foreground: 0 0% 100%;
+  --nexlink-primary: 212.01999999999998 100% 46.67%;
+  --nexlink-secondary-50: 270 61.54% 94.9%;
+  --nexlink-secondary-100: 270 59.26% 89.41%;
+  --nexlink-secondary-200: 270 59.26% 78.82%;
+  --nexlink-secondary-300: 270 59.26% 68.24%;
+  --nexlink-secondary-400: 270 59.26% 57.65%;
+  --nexlink-secondary-500: 270 66.67% 47.06%;
+  --nexlink-secondary-600: 270 66.67% 37.65%;
+  --nexlink-secondary-700: 270 66.67% 28.24%;
+  --nexlink-secondary-800: 270 66.67% 18.82%;
+  --nexlink-secondary-900: 270 66.67% 9.41%;
+  --nexlink-secondary-foreground: 0 0% 100%;
+  --nexlink-secondary: 270 66.67% 47.06%;
+  --nexlink-success-50: 146.66999999999996 64.29% 94.51%;
+  --nexlink-success-100: 145.71000000000004 61.4% 88.82%;
+  --nexlink-success-200: 146.2 61.74% 77.45%;
+  --nexlink-success-300: 145.78999999999996 62.57% 66.47%;
+  --nexlink-success-400: 146.01 62.45% 55.1%;
+  --nexlink-success-500: 145.96000000000004 79.46% 43.92%;
+  --nexlink-success-600: 146.01 79.89% 35.1%;
+  --nexlink-success-700: 145.78999999999996 79.26% 26.47%;
+  --nexlink-success-800: 146.2 79.78% 17.45%;
+  --nexlink-success-900: 145.71000000000004 77.78% 8.82%;
+  --nexlink-success-foreground: 0 0% 0%;
+  --nexlink-success: 145.96000000000004 79.46% 43.92%;
+  --nexlink-warning-50: 54.55000000000001 91.67% 95.29%;
+  --nexlink-warning-100: 37.139999999999986 91.3% 90.98%;
+  --nexlink-warning-200: 37.139999999999986 91.3% 81.96%;
+  --nexlink-warning-300: 36.95999999999998 91.24% 73.14%;
+  --nexlink-warning-400: 37.00999999999999 91.26% 64.12%;
+  --nexlink-warning-500: 37.02999999999997 91.27% 55.1%;
+  --nexlink-warning-600: 37.00999999999999 74.22% 44.12%;
+  --nexlink-warning-700: 36.95999999999998 73.96% 33.14%;
+  --nexlink-warning-800: 37.139999999999986 75% 21.96%;
+  --nexlink-warning-900: 37.139999999999986 75% 10.98%;
+  --nexlink-warning-foreground: 0 0% 0%;
+  --nexlink-warning: 37.02999999999997 91.27% 55.1%;
+  --nexlink-danger-50: 339.13 92% 95.1%;
+  --nexlink-danger-100: 340 91.84% 90.39%;
+  --nexlink-danger-200: 339.3299999999999 90% 80.39%;
+  --nexlink-danger-300: 339.11 90.6% 70.78%;
+  --nexlink-danger-400: 339 90% 60.78%;
+  --nexlink-danger-500: 339.20000000000005 90.36% 51.18%;
+  --nexlink-danger-600: 339 86.54% 40.78%;
+  --nexlink-danger-700: 339.11 85.99% 30.78%;
+  --nexlink-danger-800: 339.3299999999999 86.54% 20.39%;
+  --nexlink-danger-900: 340 84.91% 10.39%;
+  --nexlink-danger-foreground: 0 0% 100%;
+  --nexlink-danger: 339.20000000000005 90.36% 51.18%;
+  --nexlink-divider-weight: 1px;
+  --nexlink-disabled-opacity: .5;
+  --nexlink-font-size-tiny: 0.75rem;
+  --nexlink-font-size-small: 0.875rem;
+  --nexlink-font-size-medium: 1rem;
+  --nexlink-font-size-large: 1.125rem;
+  --nexlink-line-height-tiny: 1rem;
+  --nexlink-line-height-small: 1.25rem;
+  --nexlink-line-height-medium: 1.5rem;
+  --nexlink-line-height-large: 1.75rem;
+  --nexlink-radius-small: 8px;
+  --nexlink-radius-medium: 12px;
+  --nexlink-radius-large: 14px;
+  --nexlink-border-width-small: 1px;
+  --nexlink-border-width-medium: 2px;
+  --nexlink-border-width-large: 3px;
+  --nexlink-box-shadow-small: 0px 0px 5px 0px rgb(0 0 0 / 0.02), 0px 2px 10px 0px rgb(0 0 0 / 0.06), 0px 0px 1px 0px rgb(0 0 0 / 0.3);
+  --nexlink-box-shadow-medium: 0px 0px 15px 0px rgb(0 0 0 / 0.03), 0px 2px 30px 0px rgb(0 0 0 / 0.08), 0px 0px 1px 0px rgb(0 0 0 / 0.3);
+  --nexlink-box-shadow-large: 0px 0px 30px 0px rgb(0 0 0 / 0.04), 0px 30px 60px 0px rgb(0 0 0 / 0.12), 0px 0px 1px 0px rgb(0 0 0 / 0.3);
+  --nexlink-hover-opacity: .8;
+}
+
+.dark,[data-theme="dark"]{
+  color-scheme: dark;
+  --nexlink-background: 0 0% 0%;
+  --nexlink-foreground-50: 240 5.88% 10%;
+  --nexlink-foreground-100: 240 3.7% 15.88%;
+  --nexlink-foreground-200: 240 5.26% 26.08%;
+  --nexlink-foreground-300: 240 5.2% 33.92%;
+  --nexlink-foreground-400: 240 3.83% 46.08%;
+  --nexlink-foreground-500: 240 5.03% 64.9%;
+  --nexlink-foreground-600: 240 4.88% 83.92%;
+  --nexlink-foreground-700: 240 5.88% 90%;
+  --nexlink-foreground-800: 240 4.76% 95.88%;
+  --nexlink-foreground-900: 0 0% 98.04%;
+  --nexlink-foreground: 210 5.56% 92.94%;
+  --nexlink-focus: 212.01999999999998 100% 46.67%;
+  --nexlink-overlay: 0 0% 0%;
+  --nexlink-divider: 0 0% 100%;
+  --nexlink-divider-opacity: 0.15;
+  --nexlink-content1: 240 5.88% 10%;
+  --nexlink-content1-foreground: 0 0% 98.04%;
+  --nexlink-content2: 240 3.7% 15.88%;
+  --nexlink-content2-foreground: 240 4.76% 95.88%;
+  --nexlink-content3: 240 5.26% 26.08%;
+  --nexlink-content3-foreground: 240 5.88% 90%;
+  --nexlink-content4: 240 5.2% 33.92%;
+  --nexlink-content4-foreground: 240 4.88% 83.92%;
+  --nexlink-default-50: 240 5.88% 10%;
+  --nexlink-default-100: 240 3.7% 15.88%;
+  --nexlink-default-200: 240 5.26% 26.08%;
+  --nexlink-default-300: 240 5.2% 33.92%;
+  --nexlink-default-400: 240 3.83% 46.08%;
+  --nexlink-default-500: 240 5.03% 64.9%;
+  --nexlink-default-600: 240 4.88% 83.92%;
+  --nexlink-default-700: 240 5.88% 90%;
+  --nexlink-default-800: 240 4.76% 95.88%;
+  --nexlink-default-900: 0 0% 98.04%;
+  --nexlink-default-foreground: 0 0% 100%;
+  --nexlink-default: 240 5.26% 26.08%;
+  --nexlink-primary-50: 211.84000000000003 100% 9.61%;
+  --nexlink-primary-100: 211.84000000000003 100% 19.22%;
+  --nexlink-primary-200: 212.24 100% 28.82%;
+  --nexlink-primary-300: 212.14 100% 38.43%;
+  --nexlink-primary-400: 212.01999999999998 100% 46.67%;
+  --nexlink-primary-500: 212.14 92.45% 58.43%;
+  --nexlink-primary-600: 212.24 92.45% 68.82%;
+  --nexlink-primary-700: 211.84000000000003 92.45% 79.22%;
+  --nexlink-primary-800: 211.84000000000003 92.45% 89.61%;
+  --nexlink-primary-900: 212.5 92.31% 94.9%;
+  --nexlink-primary-foreground: 0 0% 100%;
+  --nexlink-primary: 212.01999999999998 100% 46.67%;
+  --nexlink-secondary-50: 270 66.67% 9.41%;
+  --nexlink-secondary-100: 270 66.67% 18.82%;
+  --nexlink-secondary-200: 270 66.67% 28.24%;
+  --nexlink-secondary-300: 270 66.67% 37.65%;
+  --nexlink-secondary-400: 270 66.67% 47.06%;
+  --nexlink-secondary-500: 270 59.26% 57.65%;
+  --nexlink-secondary-600: 270 59.26% 68.24%;
+  --nexlink-secondary-700: 270 59.26% 78.82%;
+  --nexlink-secondary-800: 270 59.26% 89.41%;
+  --nexlink-secondary-900: 270 61.54% 94.9%;
+  --nexlink-secondary-foreground: 0 0% 100%;
+  --nexlink-secondary: 270 59.26% 57.65%;
+  --nexlink-success-50: 145.71000000000004 77.78% 8.82%;
+  --nexlink-success-100: 146.2 79.78% 17.45%;
+  --nexlink-success-200: 145.78999999999996 79.26% 26.47%;
+  --nexlink-success-300: 146.01 79.89% 35.1%;
+  --nexlink-success-400: 145.96000000000004 79.46% 43.92%;
+  --nexlink-success-500: 146.01 62.45% 55.1%;
+  --nexlink-success-600: 145.78999999999996 62.57% 66.47%;
+  --nexlink-success-700: 146.2 61.74% 77.45%;
+  --nexlink-success-800: 145.71000000000004 61.4% 88.82%;
+  --nexlink-success-900: 146.66999999999996 64.29% 94.51%;
+  --nexlink-success-foreground: 0 0% 0%;
+  --nexlink-success: 145.96000000000004 79.46% 43.92%;
+  --nexlink-warning-50: 37.139999999999986 75% 10.98%;
+  --nexlink-warning-100: 37.139999999999986 75% 21.96%;
+  --nexlink-warning-200: 36.95999999999998 73.96% 33.14%;
+  --nexlink-warning-300: 37.00999999999999 74.22% 44.12%;
+  --nexlink-warning-400: 37.02999999999997 91.27% 55.1%;
+  --nexlink-warning-500: 37.00999999999999 91.26% 64.12%;
+  --nexlink-warning-600: 36.95999999999998 91.24% 73.14%;
+  --nexlink-warning-700: 37.139999999999986 91.3% 81.96%;
+  --nexlink-warning-800: 37.139999999999986 91.3% 90.98%;
+  --nexlink-warning-900: 54.55000000000001 91.67% 95.29%;
+  --nexlink-warning-foreground: 0 0% 0%;
+  --nexlink-warning: 37.02999999999997 91.27% 55.1%;
+  --nexlink-danger-50: 340 84.91% 10.39%;
+  --nexlink-danger-100: 339.3299999999999 86.54% 20.39%;
+  --nexlink-danger-200: 339.11 85.99% 30.78%;
+  --nexlink-danger-300: 339 86.54% 40.78%;
+  --nexlink-danger-400: 339.20000000000005 90.36% 51.18%;
+  --nexlink-danger-500: 339 90% 60.78%;
+  --nexlink-danger-600: 339.11 90.6% 70.78%;
+  --nexlink-danger-700: 339.3299999999999 90% 80.39%;
+  --nexlink-danger-800: 340 91.84% 90.39%;
+  --nexlink-danger-900: 339.13 92% 95.1%;
+  --nexlink-danger-foreground: 0 0% 100%;
+  --nexlink-danger: 339.20000000000005 90.36% 51.18%;
+  --nexlink-divider-weight: 1px;
+  --nexlink-disabled-opacity: .5;
+  --nexlink-font-size-tiny: 0.75rem;
+  --nexlink-font-size-small: 0.875rem;
+  --nexlink-font-size-medium: 1rem;
+  --nexlink-font-size-large: 1.125rem;
+  --nexlink-line-height-tiny: 1rem;
+  --nexlink-line-height-small: 1.25rem;
+  --nexlink-line-height-medium: 1.5rem;
+  --nexlink-line-height-large: 1.75rem;
+  --nexlink-radius-small: 8px;
+  --nexlink-radius-medium: 12px;
+  --nexlink-radius-large: 14px;
+  --nexlink-border-width-small: 1px;
+  --nexlink-border-width-medium: 2px;
+  --nexlink-border-width-large: 3px;
+  --nexlink-box-shadow-small: 0px 0px 5px 0px rgb(0 0 0 / 0.05), 0px 2px 10px 0px rgb(0 0 0 / 0.2), inset 0px 0px 1px 0px rgb(255 255 255 / 0.15);
+  --nexlink-box-shadow-medium: 0px 0px 15px 0px rgb(0 0 0 / 0.06), 0px 2px 30px 0px rgb(0 0 0 / 0.22), inset 0px 0px 1px 0px rgb(255 255 255 / 0.15);
+  --nexlink-box-shadow-large: 0px 0px 30px 0px rgb(0 0 0 / 0.07), 0px 30px 60px 0px rgb(0 0 0 / 0.26), inset 0px 0px 1px 0px rgb(255 255 255 / 0.15);
+  --nexlink-hover-opacity: .9;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+.btn_{
+  --btn-background: hsl(var(--nexlink-default-200) / var(--nexlink-default-200-opacity, 1));
+  --btn-hover-bg: hsl(var(--nexlink-default-300) / var(--nexlink-default-300-opacity, 1));
+  --btn-color: hsl(var(--nexlink-default-800) / var(--nexlink-default-800-opacity, 1));
+  --btn-hover-color: hsl(var(--nexlink-default-800) / var(--nexlink-default-800-opacity, 1));
+  --btn-height: 2.5rem;
+  --btn-font-size: var(--nexlink-font-size-small);
+  --btn-radius: var(--nexlink-radius-medium);
+  --btn-badge-size:1.5em;
+  background: var(--btn-background);
+  color: var(--btn-color);
+  height: var(--btn-height);
+  font-size: var(--btn-font-size);
+  border-radius: var(--btn-radius);
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  &:disabled , &.btn_disabled{
+    pointer-events: none;
+  }
+  &:disabled , &.btn_disabled{
+    opacity: 0.6;
+  }
+  &:hover{
+    opacity: var(--nexlink-hover-opacity);
+  }
+  &.btn_bordered{
+    border-color: var(--btn-background);
+    color: var(--btn-background);
+    background-color: transparent;
+  }
+  &.btn_bordered{
+    border-width: var(--nexlink-border-width-medium);
+  }
+  &.btn_light{
+    color: var(--btn-background);
+    background-color: transparent;
+    &:hover{
+      background-color: var(--btn-hover-bg);
+    }
+  }
+  &.btn_flat{
+    color: var(--btn-background);
+    background-color: var(--btn-hover-bg);
+  }
+  &.btn_ghost{
+    border-color: var(--btn-background);
+    color: var(--btn-background);
+    background-color: transparent;
+    &:hover{
+      background-color: var(--btn-background);
+      color: var(--btn-color);
+    }
+  }
+  &.btn_ghost{
+    border-width: var(--nexlink-border-width-medium);
+  }
+  &.btn_shadow{
+    --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+  &.btn_shadow{
+    --tw-shadow-color: hsl(var(--nexlink-content1) / var(--nexlink-content1-opacity, 1));
+    --tw-shadow: var(--tw-shadow-colored);
+  }
+  &.btn_lg{
+    --btn-radius: var(--nexlink-radius-large);
+    --btn-height: 3rem;
+    --btn-font-size: var(--nexlink-font-size-medium);
+  }
+  &.btn_lg{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  &.btn_sm{
+    --btn-radius: var(--nexlink-radius-small);
+    --btn-height: 2rem;
+    --btn-font-size: var(--nexlink-font-size-tiny);
+  }
+  &.btn_sm{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  &.btn_primary{
+    --btn-background: hsl(var(--nexlink-primary) / var(--nexlink-primary-opacity, 1));
+    --btn-hover-bg: hsl(var(--nexlink-primary) / .2);
+    --btn-color: hsl(var(--nexlink-primary-foreground) / var(--nexlink-primary-foreground-opacity, 1));
+    --btn-hover-color: #fff;
+  }
+  &.btn_primary{
+    --tw-shadow-color: hsl(var(--nexlink-primary) / 0.4);
+    --tw-shadow: var(--tw-shadow-colored);
+  }
+  &.btn_secondary {
+    --btn-background: hsl(var(--nexlink-secondary) / var(--nexlink-secondary-opacity, 1));
+    --btn-hover-bg: hsl(var(--nexlink-secondary) / .2);
+    --btn-color: hsl(var(--nexlink-secondary-foreground) / var(--nexlink-secondary-foreground-opacity, 1));
+    --btn-hover-color: #fff;
+  }
+  &.btn_secondary{
+    --tw-shadow-color: hsl(var(--nexlink-secondary) / 0.4);
+    --tw-shadow: var(--tw-shadow-colored);
+  }
+  &.btn_success {
+    --btn-background: hsl(var(--nexlink-success) / var(--nexlink-success-opacity, 1));
+    --btn-hover-bg: hsl(var(--nexlink-success) / .2);
+    --btn-color: hsl(var(--nexlink-success-foreground) / var(--nexlink-success-foreground-opacity, 1));
+    --btn-hover-color: #fff;
+  }
+  &.btn_success{
+    --tw-shadow-color: hsl(var(--nexlink-success) / 0.4);
+    --tw-shadow: var(--tw-shadow-colored);
+  }
+  &.btn_warning {
+    --btn-background: hsl(var(--nexlink-warning) / var(--nexlink-warning-opacity, 1));
+    --btn-hover-bg: hsl(var(--nexlink-warning) / .2);
+    --btn-color: hsl(var(--nexlink-warning-foreground) / var(--nexlink-warning-foreground-opacity, 1));
+    --btn-hover-color: #000;
+  }
+  &.btn_warning{
+    --tw-shadow-color: hsl(var(--nexlink-warning) / 0.4);
+    --tw-shadow: var(--tw-shadow-colored);
+  }
+  &.btn_danger {
+    --btn-background: hsl(var(--nexlink-danger) / var(--nexlink-danger-opacity, 1));
+    --btn-hover-bg: hsl(var(--nexlink-danger) / .2);
+    --btn-color: hsl(var(--nexlink-danger-foreground) / var(--nexlink-danger-foreground-opacity, 1));
+    --btn-hover-color: #fff;
+  }
+  &.btn_danger{
+    --tw-shadow-color: hsl(var(--nexlink-danger) / 0.4);
+    --tw-shadow: var(--tw-shadow-colored);
+  }
+  &.btn_rounded_full{
+    --btn-radius: 9999px;
+  }
+  &.btn_rounded_lg{
+    --btn-radius: var(--nexlink-radius-large);
+  }
+  &.btn_rounded_md{
+    --btn-radius: var(--nexlink-radius-medium);
+  }
+  &.btn_rounded_sm{
+    --btn-radius: var(--nexlink-radius-small);
+  }
+  &.btn_rounded_none{
+    --btn-radius: 0px;
+  }
+  &.btn_icon{
+    width: var(--btn-height);
+  }
+  &.btn_icon{
+    padding: 0px;
+  }
+  &.btn_ti{
+    gap: 0.5rem;
+  }
+  &.btn_ti{
+    svg{
+      height: 1rem;
+    }
+    svg{
+      width: 1rem;
+    }
+  }
+}

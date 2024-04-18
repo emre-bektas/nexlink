@@ -78,3 +78,14 @@ export const apiMenu: SidebarMenuSection[] = [
         ]
     }
 ]
+
+export function findMenuIndexByHref(menus: SidebarMenuSection[], href: string): { sectionIndex: number, menuIndex: number } | null {
+    for (let sectionIndex = 0; sectionIndex < menus.length; sectionIndex++) {
+        const section = menus[sectionIndex];
+        const menuIndex = section.menus.findIndex(menu => menu.href === href);
+        if (menuIndex !== -1) {
+            return { sectionIndex, menuIndex };
+        }
+    }
+    return null;
+}

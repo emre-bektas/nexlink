@@ -29,8 +29,11 @@ const config: Config = {
         },
     },
     plugins: [
-        nextui(),
+        nextui({
+            prefix: "nexlink"
+        }),
         require('@tailwindcss/typography'),
+        require('tailwindcss-signals'),
     ],
 };
 export default config;

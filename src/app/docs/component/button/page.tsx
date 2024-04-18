@@ -9,53 +9,48 @@ export default function page() {
 
 
     return (
-        <main className="flex-auto">
-            <article className="flex h-full flex-col py-10">
+        <>
+            <ArticleHeader title={"Button"} subtitle={"Bileşen"}/>
+            <ProseComponent>
+                <p className={"lead"}>
+                    Buton bileşeni, kullanıcıların tıklama yoluyla işlemleri tetiklemesini sağlar. Tasarım ve
+                    kullanılabilirlik açısından esnek yapıda olan bu bileşen, çeşitli boyut, renk ve
+                    işlevselliklerle gelmektedir.
+                </p>
+                <div className={"space-y-4"}>
+                    <AnchorTitle id={"usage"}>Kullanımı</AnchorTitle>
+                    {
+                        buttonDocs.map((item, i) => (
+                            <div key={i}>
+                                {
+                                    item.title && (
+                                        <AnchorTitle id={item.key} as={"h3"}>{item.title}</AnchorTitle>
+                                    )
+                                }
+                                <CodeTabs
+                                    tabs={[
+                                        {
+                                            key: "preview-button",
+                                            title: "Önizleme",
+                                            html: true,
+                                            content: item.code,
+                                        },
+                                        {
+                                            key: "preview-code",
+                                            title: "HTML Kodu",
+                                            language: "htmlbars",
+                                            content: item.code,
+                                        },
+                                    ]}
+                                />
+                            </div>
+                        ))
+                    }
 
-                <ArticleHeader title={"Button"} subtitle={"Bileşen"}/>
+                </div>
 
-                <ProseComponent>
-                    <p className={"lead"}>
-                        Buton bileşeni, kullanıcıların tıklama yoluyla işlemleri tetiklemesini sağlar. Tasarım ve
-                        kullanılabilirlik açısından esnek yapıda olan bu bileşen, çeşitli boyut, renk ve
-                        işlevselliklerle gelmektedir.
-                    </p>
-                    <div className={"space-y-4"}>
-                        <AnchorTitle id={"usage"}>Kullanımı</AnchorTitle>
-                        {
-                            buttonDocs.map((item, i) => (
-                                <div key={i}>
-                                    {
-                                        item.title && (
-                                            <AnchorTitle id={item.key} as={"h3"}>{item.title}</AnchorTitle>
-                                        )
-                                    }
-                                    <CodeTabs
-                                        tabs={[
-                                            {
-                                                key: "preview-button",
-                                                title: "Önizleme",
-                                                html: true,
-                                                content: item.code,
-                                            },
-                                            {
-                                                key: "preview-code",
-                                                title: "HTML Kodu",
-                                                language: "htmlbars",
-                                                content: item.code,
-                                            },
-                                        ]}
-                                    />
-                                </div>
-                            ))
-                        }
-
-                    </div>
-
-                </ProseComponent>
-
-            </article>
-        </main>
+            </ProseComponent>
+        </>
 
     )
 }

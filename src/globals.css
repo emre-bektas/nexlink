@@ -34,5 +34,5 @@ body{
     height: 100%;
     filter: blur(100px) saturate(150%);
     top: 200px;
-    opacity: 0.10;
+    opacity: 0.06;
 }

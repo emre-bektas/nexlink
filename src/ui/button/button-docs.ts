@@ -9,14 +9,11 @@ interface ButtonConfig {
 function generateButtonsHtml(buttonConfigs: ButtonConfig[]): string {
     let buttonsHtml = buttonConfigs.map(config => {
         const classes = config.classes.join(' ').trim();
-
-
-
         return `
 <button class="btn_${classes && (" " + classes)}">${config.label ?? "Button"}</button>`;
     }).join('');
 
-    let html = buttonConfigs.length > 1 ? `<div class="flex items-center gap-3">${buttonsHtml}</div>` : buttonsHtml;
+    let html = buttonConfigs.length > 1 ? `<div style="display: flex;align-items: center;gap:.75rem;">${buttonsHtml}</div>` : buttonsHtml;
 
     return html_beautify(html, {
         indent_size: 2,

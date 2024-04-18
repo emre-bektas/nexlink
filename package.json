@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build:css": "npx tailwindcss -i ./src/ui/css/style.css -o ./public/ui/style.min.css --minify"
+    "build:css": "npx tailwindcss -i ./src/ui/css/styles.css -o ./public/ui/style.min.css "
   },
   "dependencies": {
     "@nextui-org/react": "^2.3.1",
@@ -24,6 +24,7 @@
     "react-dom": "^18",
     "react-syntax-highlighter": "^15.5.0",
     "tailwind-merge": "^2.2.2",
+    "tailwindcss-signals": "^0.0.14",
     "usehooks-ts": "^3.1.0"
   },
   "devDependencies": {
