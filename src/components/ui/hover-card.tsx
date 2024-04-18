@@ -12,6 +12,7 @@ interface MousePosition {
 interface Props {
     title: string;
     description?: string;
+    href?: string;
     Icon: React.ComponentType<any>
 }
 
@@ -32,7 +33,7 @@ const SvgCard = ({cn}: any) => (
     </svg>
 )
 
-const HoverCard: React.FC<Props> = ({title, description, Icon}) => {
+const HoverCard: React.FC<Props> = ({title, description, href = "#", Icon}) => {
 
     const divRef = useRef<HTMLDivElement>(null);
 
@@ -86,9 +87,11 @@ const HoverCard: React.FC<Props> = ({title, description, Icon}) => {
                             </div>
                         )
                     }
-                    <h3 className="mt-4 text-sm font-semibold leading-7 text-zinc-900 dark:text-white"><a
-                        href="/conversations">
-                        <span className="absolute inset-0 rounded-2xl"></span>{title}</a>
+                    <h3 className="mt-4 text-sm font-semibold leading-7 text-zinc-900 dark:text-white">
+                        <a
+                            href={href}>
+                            <span className="absolute inset-0 rounded-2xl"></span>{title}
+                        </a>
                     </h3>
                     {
                         description && (

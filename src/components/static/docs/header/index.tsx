@@ -5,8 +5,9 @@ import {MoonIcon, Search, SunMediumIcon} from "lucide-react";
 import {useTheme} from "next-themes";
 import {useEffect, useState} from "react";
 import {Kbd} from "@nextui-org/kbd";
+import Link from "next/link";
 
-export const Header = () => {
+export const HeaderDoc = () => {
 
     const {setTheme, resolvedTheme} = useTheme();
 
@@ -22,13 +23,14 @@ export const Header = () => {
             base: "bg-transparent ",
             wrapper: "px-4 sm:px-6 md:px-8 max-w-8xl"
         }}>
-            <NavbarContent justify="start">
-                <NavbarBrand className="mr-4 gap-3">
-                    <p className="font-bold text-inherit">NexLink API Creations</p>
+            <NavbarContent  justify={"start"} className={"!grow-0"}>
+                <NavbarBrand className="mr-4 flex-0 gap-3">
+                    <Link href={"/"}
+                          className="font-bold text-inherit">NexLink API</Link>
                 </NavbarBrand>
             </NavbarContent>
 
-            <NavbarContent as="div" className="items-center" justify="end">
+            <NavbarContent className="items-center w-full" justify={"end"}>
                 <Input
                     classNames={{
                         base: "max-w-sm h-10",

@@ -86,6 +86,7 @@ export default function page() {
                             title={"Dökümantasyon"}
                             description={"Detaylı API dökümantasyonuna buradan ulaşabilirsiniz."}
                             Icon={BookOpenText}
+                            href={"/docs"}
 
                         />
                         <HoverCard

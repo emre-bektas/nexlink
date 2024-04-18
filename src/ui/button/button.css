@@ -1,0 +1,128 @@
+.btn_{
+
+    --btn-background: theme("colors.default-200");
+    --btn-hover-bg: theme("colors.default-300");
+    --btn-color: theme("colors.default-800");
+    --btn-hover-color: theme("colors.default-800");
+
+    --btn-height: theme("height.10");
+    --btn-font-size: theme("fontSize.small");
+    --btn-radius: theme("borderRadius.medium");
+
+    --btn-badge-size:1.5em;
+    background: var(--btn-background);
+    color: var(--btn-color);
+    height: var(--btn-height);
+    font-size: var(--btn-font-size);
+    border-radius: var(--btn-radius);
+    @apply px-4  inline-flex select-none items-center justify-center transition-all cursor-pointer appearance-none relative whitespace-nowrap;
+
+    &:disabled , &.btn_disabled{
+        @apply pointer-events-none opacity-60;
+    }
+    &:hover{
+        @apply opacity-hover;
+    }
+    &.btn_bordered{
+        border-color: var(--btn-background);
+        color: var(--btn-background);
+        background-color: transparent;
+        @apply border-medium;
+    }
+    &.btn_light{
+        color: var(--btn-background);
+        background-color: transparent;
+        &:hover{
+            background-color: var(--btn-hover-bg);
+        }
+    }
+    &.btn_flat{
+        color: var(--btn-background);
+        background-color: var(--btn-hover-bg);
+    }
+    &.btn_ghost{
+        border-color: var(--btn-background);
+        color: var(--btn-background);
+        background-color: transparent;
+        &:hover{
+            background-color: var(--btn-background);
+            color: var(--btn-color);
+        }
+        @apply border-medium;
+    }
+    &.btn_shadow{
+        @apply shadow-lg shadow-content1;
+    }
+    &.btn_lg{
+        --btn-radius: theme("borderRadius.large");
+        --btn-height: theme("height.12");
+        --btn-font-size: theme("fontSize.medium");
+        @apply px-6;
+    }
+    &.btn_sm{
+        --btn-radius: theme("borderRadius.small");
+        --btn-height: theme("height.8");
+        --btn-font-size: theme("fontSize.tiny");
+        @apply px-3;
+    }
+    &.btn_primary{
+        --btn-background: theme("colors.primary");
+        --btn-hover-bg: hsl(var(--nextui-primary) / .2);
+        --btn-color: theme("colors.primary-foreground");
+        --btn-hover-color: theme("colors.white");
+        @apply shadow-primary/40;
+    }
+    &.btn_secondary {
+        --btn-background: theme("colors.secondary");
+        --btn-hover-bg: hsl(var(--nextui-secondary) / .2);
+        --btn-color: theme("colors.secondary-foreground");
+        --btn-hover-color: theme("colors.white");
+        @apply shadow-secondary/40;
+    }
+    &.btn_success {
+        --btn-background: theme("colors.success");
+        --btn-hover-bg: hsl(var(--nextui-success) / .2);
+        --btn-color: theme("colors.success-foreground");
+        --btn-hover-color: theme("colors.white");
+        @apply shadow-success/40;
+    }
+
+    &.btn_warning {
+        --btn-background: theme("colors.warning");
+        --btn-hover-bg: hsl(var(--nextui-warning) / .2);
+        --btn-color: theme("colors.warning-foreground");
+        --btn-hover-color: theme("colors.black");
+        @apply shadow-warning/40;
+    }
+
+    &.btn_danger {
+        --btn-background: theme("colors.danger");
+        --btn-hover-bg: hsl(var(--nextui-danger) / .2);
+        --btn-color: theme("colors.danger-foreground");
+        --btn-hover-color: theme("colors.white");
+        @apply shadow-danger/40;
+    }
+
+    &.btn_rounded_full{
+        --btn-radius: theme("borderRadius.full");
+    }
+    &.btn_rounded_lg{
+        --btn-radius: theme("borderRadius.large");
+    }
+    &.btn_rounded_md{
+        --btn-radius: theme("borderRadius.medium");
+    }
+    &.btn_rounded_sm{
+        --btn-radius: theme("borderRadius.small");
+    }
+    &.btn_rounded_none{
+        --btn-radius: theme("borderRadius.none");
+    }
+    &.btn_icon{
+        width: var(--btn-height);
+        @apply p-0;
+    }
+    &.btn_ti{
+        @apply gap-2;
+    }
+}

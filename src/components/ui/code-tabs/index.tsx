@@ -16,6 +16,7 @@ interface CodeTab {
     title?: string;
     language?: string;
     content: string;
+    html?: boolean;
 }
 
 interface CodeTabsProps {
@@ -64,10 +65,9 @@ const CodeTabs = ({tabs, isShowTab = true}: CodeTabsProps) => {
     )
 
 
-
     return (
         <div className="not-prose">
-            <Card >
+            <Card>
                 {
                     isShowTab ? (
                         <CardHeader
@@ -90,13 +90,13 @@ const CodeTabs = ({tabs, isShowTab = true}: CodeTabsProps) => {
 
                             </Tabs>
 
-                            <CopyButton />
+                            <CopyButton/>
 
                         </CardHeader>
                     ) : (
                         <>
                             <div className={"absolute top-4 right-4 z-10"}>
-                                <CopyButton />
+                                <CopyButton/>
                             </div>
                         </>
                     )
@@ -104,16 +104,26 @@ const CodeTabs = ({tabs, isShowTab = true}: CodeTabsProps) => {
                 <CardBody>
                     {
                         seletedTab?.content && (
-                            <SyntaxHighlighter
-                                customStyle={{
-                                    background: "transparent",
-                                    fontSize: ".92rem",
-                                    fontWeight: "lighter"
-                                }}
-                                language={seletedTab.language ?? "javascript"}
-                                style={style}>
-                                {seletedTab?.content}
-                            </SyntaxHighlighter>
+                            <>
+                                {
+                                    seletedTab?.html ? (
+                                        <div dangerouslySetInnerHTML={{__html: seletedTab.content}}>
+
+                                        </div>
+                                    ) : (
+                                        <SyntaxHighlighter
+                                            customStyle={{
+                                                background: "transparent",
+                                                fontSize: ".92rem",
+                                                fontWeight: "lighter"
+                                            }}
+                                            language={seletedTab.language ?? "javascript"}
+                                            style={style}>
+                                            {seletedTab?.content}
+                                        </SyntaxHighlighter>
+                                    )
+                                }
+                            </>
                         )
                     }
 
