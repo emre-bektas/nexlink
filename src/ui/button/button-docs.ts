@@ -22,6 +22,7 @@ function generateButtonsHtml(buttonConfigs: ButtonConfig[]): string {
 }
 
 
+
 export const buttonDocs = [
     {
         key: "default",

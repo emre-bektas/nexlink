@@ -5,30 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9501868-a984-45c4-b6f8-109219ccb002" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/ui/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/css/root.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/ postcss.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/src/button.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/src/ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/webpack.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(home)/endpoint/create-new-link/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/docs/component/input/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/_utils.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/button/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/input/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/input/input-docs.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bun.lockb" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lockb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/ui/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/ui/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/errors/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/errors/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/rate-limits/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/rate-limits/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/docs/component/button/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/docs/component/button/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/docs/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/docs/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/docs/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/docs/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/static/docs/header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/static/docs/header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/code-tabs/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/code-tabs/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/sidebar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/sidebar/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/typography.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/typography.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/button/button-docs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/button/button-docs.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/button/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/button/button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/css/prefix/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/main-svg/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/static/sidebar.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/static/sidebar.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +45,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
-        <option value="TypeScript File" />
         <option value="Less File" />
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="TypeScript JSX File" />
+        <option value="tsconfig.json" />
+        <option value="CSS File" />
+        <option value="TypeScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -53,7 +62,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -74,32 +83,32 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "jsx.switch.disabled": "true",
-    "last_opened_file_path": "/Users/emrebektas/Desktop/Uygulamalar/api-template/src/app/docs/component",
-    "list.type.of.created.stylesheet": "CSS",
+    "last_opened_file_path": "/Users/emrebektas/Desktop/Uygulamalar/api-template/src/ui",
+    "list.type.of.created.stylesheet": "SCSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "settings.typescriptcompiler",
     "ts.external.directory.path": "/Users/emrebektas/Desktop/Uygulamalar/api-template/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/ui" />
       <recent name="$PROJECT_DIR$/src/app/docs/component" />
-      <recent name="$PROJECT_DIR$/src/ui/css" />
-      <recent name="$PROJECT_DIR$/src/app" />
-      <recent name="$PROJECT_DIR$/src/components/static/docs" />
-      <recent name="$PROJECT_DIR$/src/app/docs" />
+      <recent name="$PROJECT_DIR$/scripts/src" />
+      <recent name="$PROJECT_DIR$/src/ui/scripts" />
+      <recent name="$PROJECT_DIR$/public/ui" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/ui" />
+      <recent name="$PROJECT_DIR$/src/ui/scripts" />
       <recent name="$PROJECT_DIR$/src/ui/css" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/app/(home)" />
-      <recent name="$PROJECT_DIR$/src/components/ui/anchor-title" />
-      <recent name="$PROJECT_DIR$/src/components/ui/index" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -125,7 +134,18 @@
       <workItem from="1713389671968" duration="10062000" />
       <workItem from="1713399838257" duration="13000" />
       <workItem from="1713399957340" duration="1332000" />
-      <workItem from="1713401298171" duration="8649000" />
+      <workItem from="1713401298171" duration="8939000" />
+      <workItem from="1713451890437" duration="999000" />
+      <workItem from="1713511794929" duration="154000" />
+      <workItem from="1713512384295" duration="102000" />
+      <workItem from="1713512497896" duration="10422000" />
+      <workItem from="1713728001395" duration="10942000" />
+      <workItem from="1713787207989" duration="6523000" />
+      <workItem from="1713800033730" duration="5592000" />
+      <workItem from="1713909895223" duration="161000" />
+      <workItem from="1714074096889" duration="3953000" />
+      <workItem from="1714120576317" duration="611000" />
+      <workItem from="1714134364449" duration="10010000" />
     </task>
     <servers />
   </component>

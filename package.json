@@ -7,15 +7,20 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build:css": "npx tailwindcss -i ./src/ui/css/styles.css -o ./public/ui/style.min.css "
+    "build:css": "npx tailwindcss -i ./src/ui/css/styles.css -o ./public/ui/style.css ",
+    "build:css-min": "npx tailwindcss -i ./src/ui/css/styles.css -o ./public/ui/style.min.css --minify",
+    "build:ui": "tsc ./src/ui/ui.ts --outDir ./public/ui/ui.js",
+    "build:ui-watch": "tsc -w ./src/ui/ui.ts --outDir ./public/ui/ui.js"
   },
   "dependencies": {
     "@nextui-org/react": "^2.3.1",
+    "@types/jquery": "^3.5.29",
     "@types/js-beautify": "^1.14.3",
     "@types/react-syntax-highlighter": "^15.5.11",
     "classnames": "^2.5.1",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.28",
+    "jquery": "^3.7.1",
     "js-beautify": "^1.15.1",
     "lucide-react": "^0.368.0",
     "next": "14.2.1",

@@ -1,0 +1,15 @@
+@mixin set-component-styles($component) {
+  $rounded-styles: (
+          "full": theme("borderRadius.full"),
+          "lg": theme("borderRadius.large"),
+          "md": theme("borderRadius.medium"),
+          "sm": theme("borderRadius.small"),
+          "none": theme("borderRadius.none")
+  );
+
+  @each $name, $value in $rounded-styles {
+    &.#{$component}_#{$name} {
+      --input-radius: #{$value};
+    }
+  }
+}

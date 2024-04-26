@@ -1,6 +1,7 @@
 .btn_{
 
-    --btn-background: theme("colors.default-200");
+    --btn-background: theme("colors.default");
+    --btn-light-color: theme("colors.default-800");
     --btn-hover-bg: theme("colors.default-300");
     --btn-color: theme("colors.default-800");
     --btn-hover-color: theme("colors.default-800");
@@ -23,6 +24,7 @@
     &:hover{
         @apply opacity-hover;
     }
+
     &.btn_bordered{
         border-color: var(--btn-background);
         color: var(--btn-background);
@@ -30,7 +32,7 @@
         @apply border-medium;
     }
     &.btn_light{
-        color: var(--btn-background);
+        color: var(--btn-light-color);
         background-color: transparent;
         &:hover{
             background-color: var(--btn-hover-bg);
@@ -53,6 +55,8 @@
     &.btn_shadow{
         @apply shadow-lg shadow-content1;
     }
+
+
     &.btn_lg{
         --btn-radius: theme("borderRadius.large");
         --btn-height: theme("height.12");
@@ -65,8 +69,11 @@
         --btn-font-size: theme("fontSize.tiny");
         @apply px-3;
     }
+
+
     &.btn_primary{
         --btn-background: theme("colors.primary");
+        --btn-light-color: theme("colors.primary");
         --btn-hover-bg: hsl(var(--nexlink-primary) / .2);
         --btn-color: theme("colors.primary-foreground");
         --btn-hover-color: theme("colors.white");
@@ -74,6 +81,7 @@
     }
     &.btn_secondary {
         --btn-background: theme("colors.secondary");
+        --btn-light-color: theme("colors.secondary");
         --btn-hover-bg: hsl(var(--nexlink-secondary) / .2);
         --btn-color: theme("colors.secondary-foreground");
         --btn-hover-color: theme("colors.white");
@@ -81,22 +89,23 @@
     }
     &.btn_success {
         --btn-background: theme("colors.success");
+        --btn-light-color: theme("colors.success");
         --btn-hover-bg: hsl(var(--nexlink-success) / .2);
         --btn-color: theme("colors.success-foreground");
         --btn-hover-color: theme("colors.white");
         @apply shadow-success/40;
     }
-
     &.btn_warning {
         --btn-background: theme("colors.warning");
+        --btn-light-color: theme("colors.warning");
         --btn-hover-bg: hsl(var(--nexlink-warning) / .2);
         --btn-color: theme("colors.warning-foreground");
         --btn-hover-color: theme("colors.black");
         @apply shadow-warning/40;
     }
-
     &.btn_danger {
         --btn-background: theme("colors.danger");
+        --btn-light-color: theme("colors.danger");
         --btn-hover-bg: hsl(var(--nexlink-danger) / .2);
         --btn-color: theme("colors.danger-foreground");
         --btn-hover-color: theme("colors.white");
@@ -127,5 +136,8 @@
         svg{
             @apply w-4 h-4;
         }
+    }
+    &.btn_full{
+        @apply flex w-full;
     }
 }

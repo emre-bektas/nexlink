@@ -1,5 +1,5 @@
 "use client";
-import SyntaxHighlighter from 'react-syntax-highlighter';
+import SyntaxHighlighter , {SyntaxHighlighterProps} from 'react-syntax-highlighter';
 import {a11yDark, a11yLight} from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import {Card, CardBody, CardHeader} from "@nextui-org/card";
 import {useTheme} from "next-themes";
@@ -17,15 +17,17 @@ interface CodeTab {
     language?: string;
     content: string;
     html?: boolean;
+
 }
 
 interface CodeTabsProps {
     tabs: CodeTab[],
+    syntaxHighlighter?: Omit<SyntaxHighlighterProps, 'children'>;
     isShowTab?: boolean,
 }
 
 
-const CodeTabs = ({tabs, isShowTab = true}: CodeTabsProps) => {
+const CodeTabs = ({tabs, isShowTab = true , syntaxHighlighter}: CodeTabsProps) => {
 
     const {resolvedTheme} = useTheme();
     const [copiedText, copy] = useCopyToClipboard()
@@ -66,8 +68,10 @@ const CodeTabs = ({tabs, isShowTab = true}: CodeTabsProps) => {
 
 
     return (
-        <div className="not-prose">
-            <Card>
+        <div className="not-prose min-w-0">
+            <Card classNames={{
+                base : "h-full"
+            }}>
                 {
                     isShowTab ? (
                         <CardHeader
@@ -101,25 +105,24 @@ const CodeTabs = ({tabs, isShowTab = true}: CodeTabsProps) => {
                         </>
                     )
                 }
-                <CardBody>
+                <CardBody className={"overflow-auto"}>
                     {
                         seletedTab?.content && (
                             <>
                                 {
                                     seletedTab?.html ? (
-                                        <div dangerouslySetInnerHTML={{__html: seletedTab.content}}>
-
-                                        </div>
+                                        <div dangerouslySetInnerHTML={{__html: seletedTab.content}} />
                                     ) : (
                                         <SyntaxHighlighter
                                             customStyle={{
                                                 background: "transparent",
-                                                fontSize: ".92rem",
-                                                fontWeight: "lighter"
+                                                fontSize: ".81rem",
+                                                fontWeight: "lighter",
                                             }}
+                                            {...syntaxHighlighter}
                                             language={seletedTab.language ?? "javascript"}
                                             style={style}>
-                                            {seletedTab?.content}
+                                            {seletedTab?.content.trim()}
                                         </SyntaxHighlighter>
                                     )
                                 }

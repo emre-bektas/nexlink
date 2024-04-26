@@ -1,27 +1,26 @@
 "use client";
-import "@/ui/button/index.css"
+import "@/ui/input/index.css"
 import ArticleHeader from "@/components/ui/article-header";
 import ProseComponent from "@/components/ui/prose";
 import CodeTabs from "@/components/ui/code-tabs";
-import {buttonDocs} from "@/ui/button/button-docs";
 import AnchorTitle from "@/components/ui/anchor-title";
+import {inputDocs} from "@/ui/input/input-docs";
 
 export default function page() {
 
 
     return (
         <>
-            <ArticleHeader title={"Button"} subtitle={"Bileşen"}/>
+            <ArticleHeader title={"Input"} subtitle={"Bileşen"}/>
             <ProseComponent>
                 <p className={"lead"}>
-                    Buton bileşeni, kullanıcıların tıklama yoluyla işlemleri tetiklemesini sağlar. Tasarım ve
-                    kullanılabilirlik açısından esnek yapıda olan bu bileşen, çeşitli boyut, renk ve
-                    işlevselliklerle gelmektedir.
+                    Input, kullanıcıların metin girmelerine olanak tanıyan bir bileşendir. Formlarda, arama alanlarında
+                    ve daha fazlasında kullanıcı girdilerini almak için kullanılabilir.
                 </p>
                 <div className={"space-y-4"}>
                     <AnchorTitle id={"usage"}>Kullanımı</AnchorTitle>
                     {
-                        buttonDocs.map((item, i) => (
+                        inputDocs.map((item, i) => (
                             <div key={i}>
                                 {
                                     item.title && (
@@ -49,6 +48,7 @@ export default function page() {
                     }
 
                 </div>
+
 
             </ProseComponent>
         </>

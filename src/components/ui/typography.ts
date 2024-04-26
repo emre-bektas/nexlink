@@ -25,6 +25,16 @@ export const typography = ({theme}:any) => {
                         fontSize : ".75rem",
                     }
                 },
+                dd : {
+                    code : {
+                        "&:before" : {
+                            content : "none",
+                        },
+                        "&:after" : {
+                            content : "none",
+                        }
+                    }
+                },
                 table : {
                     thead : {
                         tr : {

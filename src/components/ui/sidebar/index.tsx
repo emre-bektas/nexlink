@@ -28,7 +28,6 @@ export const SidebarUI = ({menu, startPathname = "/"}: SidebarUIProps) => {
 
     const {value, setTrue, setFalse} = useBoolean(false)
 
-
     return (
 
         <div className={"flex flex-col"}>
@@ -78,7 +77,7 @@ export const SidebarUI = ({menu, startPathname = "/"}: SidebarUIProps) => {
             <div
                 className={cn(
                     "z-[99999] -left-full fixed top-2 ml-2 rounded-2xl shadow h-[calc(100dvh-theme(space.4))] w-[17.5rem] flex-shrink-0 transition-all bg-content1",
-                    "md:block md:h-[calc(100vh-theme(space.16))] md:sticky md:top-16 md:bg-transparent",
+                    "md:block md:h-[calc(100vh-theme(space.16))] md:!sticky md:top-16 md:bg-transparent",
                     {
                         "left-0 px-4 py-2 signal": value
                     }
@@ -100,7 +99,7 @@ export const SidebarUI = ({menu, startPathname = "/"}: SidebarUIProps) => {
                                             <div
                                                 className={cn("group w-full flex items-center  rounded-lg px-2 py-1.5  gap-3", {
                                                     "bg-secondary-100/70 text-default-900": (item.href !== startPathname ? pathname.startsWith(item.href) : pathname === item.href),
-                                                    "hover:bg-default-100 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300": !pathname.startsWith(item.href) || !item.href,
+                                                    "hover:bg-default-100 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300": (item.href !== startPathname ? !pathname.startsWith(item.href) : pathname !== item.href) || !item.href,
                                                 })}>
 
 

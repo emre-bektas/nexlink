@@ -3,6 +3,7 @@ import {HeaderDoc} from "@/components/static/docs/header";
 import {docMenu} from "@/utils/static/sidebar";
 import {SidebarUI} from "@/components/ui/sidebar";
 import MainSvg from "@/components/ui/main-svg";
+import Script from "next/script";
 
 
 export const metadata: Metadata = {

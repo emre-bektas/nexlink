@@ -1,0 +1,142 @@
+.input_ {
+  --input-background: theme("colors.default-200");
+  --input-hover-bg: theme("colors.default-300");
+  --input-color: theme("colors.default-800");
+  --input-hover-color: theme("colors.default-800");
+  --input-outline-color: theme("colors.default-400");
+  --input-border-color: theme("colors.default-300");
+  --input-height: theme("height.12");
+  --input-font-size: theme("fontSize.small");
+  --input-radius: theme("borderRadius.medium");
+  --btn-badge-size:1.5em;
+  background: var(--input-background);
+  color: var(--input-color);
+  height: var(--input-height);
+  font-size: var(--input-font-size);
+  border-radius: var(--input-radius);
+  outline-color: var(--input-outline-color);
+  border-color: var(--input-border-color);
+  @apply px-4  inline-flex select-none items-center justify-center transition-all cursor-pointer appearance-none relative whitespace-nowrap placeholder:text-default-500;
+}
+.input_:disabled, .input_.input_disabled {
+  @apply pointer-events-none opacity-60;
+}
+.input_:hover:not(:focus-visible) {
+  background: var(--input-hover-bg);
+  @apply opacity-hover;
+}
+.input_.input_rounded_full {
+  --input-radius: theme("borderRadius.full");
+}
+.input_.input_rounded_lg {
+  --input-radius: theme("borderRadius.large");
+}
+.input_.input_rounded_md {
+  --input-radius: theme("borderRadius.medium");
+}
+.input_.input_rounded_sm {
+  --input-radius: theme("borderRadius.small");
+}
+.input_.input_rounded_none {
+  --input-radius: theme("borderRadius.none");
+}
+
+.input_primary {
+  --input-background: theme("colors.primary-50");
+  --input-hover-bg: theme("colors.primary-100");
+  --input-outline-color: theme("colors.primary-400");
+  --input-color: theme("colors.primary");
+  --input-hover-color: theme("colors.white");
+  @apply shadow-primary/40 placeholder:text-primary;
+}
+
+.input_danger {
+  --input-background: theme("colors.danger-50");
+  --input-hover-bg: theme("colors.danger-100");
+  --input-outline-color: theme("colors.danger-400");
+  --input-color: theme("colors.danger");
+  --input-hover-color: theme("colors.white");
+  @apply shadow-danger/40 placeholder:text-danger;
+}
+
+.input_secondary {
+  --input-background: theme("colors.secondary-50");
+  --input-hover-bg: theme("colors.secondary-100");
+  --input-outline-color: theme("colors.secondary-400");
+  --input-color: theme("colors.secondary");
+  --input-hover-color: theme("colors.white");
+  @apply shadow-secondary/40 placeholder:text-secondary;
+}
+
+.input_warning {
+  --input-background: theme("colors.warning-50");
+  --input-hover-bg: theme("colors.warning-100");
+  --input-outline-color: theme("colors.warning-400");
+  --input-color: theme("colors.warning");
+  --input-hover-color: theme("colors.white");
+  @apply shadow-warning/40 placeholder:text-warning;
+}
+
+.input_success {
+  --input-background: theme("colors.success-50");
+  --input-hover-bg: theme("colors.success-100");
+  --input-outline-color: theme("colors.success-400");
+  --input-color: theme("colors.success");
+  --input-hover-color: theme("colors.white");
+  @apply shadow-success/40 placeholder:text-success;
+}
+
+.input_bordered {
+  background: transparent;
+  color: theme("colors.default-800");
+  --input-border-color: theme("colors.default-300");
+  @apply border-medium placeholder:text-default-500 outline-none;
+}
+.input_bordered:hover {
+  background: transparent !important;
+  --input-border-color: var(--input-color);
+}
+.input_bordered:focus-visible {
+  --input-border-color: var(--input-color);
+}
+
+.input_underlined {
+  background: transparent;
+  color: theme("colors.default-800");
+  @apply border-b-medium outline-none rounded-none placeholder:text-default-500 px-2;
+}
+.input_underlined:hover {
+  background: transparent !important;
+  --input-border-color: var(--input-color);
+}
+.input_underlined:focus-visible {
+  --input-border-color: var(--input-color);
+}
+
+.input_faded {
+  background: theme("colors.default-200");
+  color: theme("colors.default-800");
+  --input-border-color: theme("colors.default-400");
+  @apply border-medium outline-none placeholder:text-default-500;
+}
+.input_faded:hover {
+  background: theme("colors.default-200");
+  --input-border-color: var(--input-color);
+}
+.input_faded:focus-visible {
+  --input-border-color: var(--input-color);
+}
+
+.input_sm {
+  --input-radius: theme("borderRadius.small");
+  --input-height: theme("height.10");
+  --input-font-size: theme("fontSize.tiny");
+}
+
+.input_lg {
+  --input-radius: theme("borderRadius.large");
+  --input-height: theme("height.14");
+  --input-font-size: theme("fontSize.medium");
+}
+
+/*# sourceMappingURL=index.css.map */

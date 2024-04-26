@@ -1,2 +1,4 @@
 @import "root.css";
-@import "../button/button.css";
+@import "../button/index.css";
+@import "../input/index.css";
+

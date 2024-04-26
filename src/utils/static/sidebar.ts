@@ -30,6 +30,11 @@ export const docMenu: SidebarMenuSection[] = [
                 href: "/docs/component/button",
                 method: "Yeni",
             },
+            {
+                title: "Input",
+                href: "/docs/component/input",
+                method: "Yeni",
+            },
         ]
     }
 ]
@@ -57,7 +62,7 @@ export const apiMenu: SidebarMenuSection[] = [
         menus: [
             {
                 title: "Yeni Bağlantı Oluştur",
-                href: "",
+                href: "/endpoint/create-new-link",
                 method: "post",
             },
             {

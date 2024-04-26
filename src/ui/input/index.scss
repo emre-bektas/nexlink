@@ -1,0 +1,105 @@
+@use '../utils' as *;
+
+$colors: primary, danger,secondary,warning,success;
+$variants: bordered,underlined,faded;
+$sizes: sm,lg;
+
+.input_{
+  --input-background: theme("colors.default-200");
+  --input-hover-bg: theme("colors.default-300");
+  --input-color: theme("colors.default-800");
+  --input-hover-color: theme("colors.default-800");
+  --input-outline-color: theme("colors.default-400");
+  --input-border-color: theme("colors.default-300");
+
+  --input-height: theme("height.12");
+  --input-font-size: theme("fontSize.small");
+  --input-radius: theme("borderRadius.medium");
+
+  --btn-badge-size:1.5em;
+  background: var(--input-background);
+  color: var(--input-color);
+  height: var(--input-height);
+  font-size: var(--input-font-size);
+  border-radius: var(--input-radius);
+  outline-color: var(--input-outline-color);
+  border-color: var(--input-border-color);
+  @apply px-4  inline-flex select-none items-center justify-center transition-all cursor-pointer appearance-none relative whitespace-nowrap placeholder:text-default-500;
+  &:disabled , &.input_disabled{
+    @apply pointer-events-none opacity-60;
+  }
+  &:hover:not(:focus-visible){
+    background : var(--input-hover-bg);
+    @apply opacity-hover;
+  }
+
+
+  @include set-component-styles("input_rounded");
+
+}
+
+@each $color in $colors {
+  .input_#{$color} {
+    --input-background: #{'theme("colors.#{$color}-50")'};
+    --input-hover-bg: #{'theme("colors.#{$color}-100")'};
+    --input-outline-color: #{'theme("colors.#{$color}-400")'};
+    --input-color: #{'theme("colors.#{$color}")'};
+    --input-hover-color: theme("colors.white");
+
+    @apply shadow-#{$color}/40 placeholder:text-#{$color};
+  }
+}
+@each $variant in $variants {
+  .input_#{$variant} {
+    @if $variant == "bordered" {
+      background: transparent;
+      color: theme("colors.default-800");
+      --input-border-color: theme("colors.default-300");
+      @apply border-medium placeholder:text-default-500 outline-none;
+      &:hover{
+        background: transparent!important;
+        --input-border-color : var(--input-color);
+      }
+      &:focus-visible {
+        --input-border-color : var(--input-color);
+      }
+    } @else if $variant == "underlined" {
+      background: transparent;
+      color: theme("colors.default-800");
+      @apply border-b-medium outline-none rounded-none placeholder:text-default-500 px-2;
+      &:hover{
+        background: transparent!important;
+        --input-border-color : var(--input-color);
+      }
+      &:focus-visible {
+        --input-border-color : var(--input-color);
+      }
+    }@else if $variant == "faded" {
+      background: theme("colors.default-200");
+      color: theme("colors.default-800");
+      --input-border-color: theme("colors.default-400");
+      @apply border-medium outline-none placeholder:text-default-500;
+      &:hover{
+        background:theme("colors.default-200");
+        --input-border-color : var(--input-color);
+      }
+      &:focus-visible {
+        --input-border-color : var(--input-color);
+      }
+    }
+  }
+}
+
+@each $size in $sizes {
+  .input_#{$size} {
+    @if $size == "sm" {
+      --input-radius: theme("borderRadius.small");
+      --input-height: theme("height.10");
+      --input-font-size: theme("fontSize.tiny");
+    }@else if $size == "lg" {
+      --input-radius: theme("borderRadius.large");
+      --input-height: theme("height.14");
+      --input-font-size: theme("fontSize.medium");
+    }
+  }
+}
